@@ -37,13 +37,19 @@ int main()
     cout << "Enter the speed (in km/h): ";
     cin >> speed;
 
+    //float timeT = travelTime(distance, speed);
+    //int hours = int(timeT);
+    //int minutes = int((timeT - hours) * 60);
+
     float timeT = travelTime(distance, speed);
-    
-    int hours = int(timeT);
-    int minutes = int((timeT - hours) * 60);
+    int timeMinutes = timeT * 60;
+    int hours = timeMinutes / 60;
+    int minutes = timeMinutes % 60;
 
     //cout << "Trevel time: " << travelTime(distance, speed) << '\n';
-    cout << "Trevel time: " << " hour: " << hours << " nimut: " << minutes;
+    cout << "The travel time is: " << hours << " hours and " << minutes << " monutes";
 
     //return 0;
 }
+
+
